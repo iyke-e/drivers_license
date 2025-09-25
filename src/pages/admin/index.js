@@ -1,0 +1,12 @@
+export { default as AdminDashboard } from './dashboard/AdminDashboard';
+export { default as Dlc } from './dlc/Dlc';
+export { default as Dssp } from './dssp/Dssp';
+export { default as Frsc } from './frsc/Frsc';
+export { default as Vio } from './vio/Vio';
+export { default as NewApplicants } from './new-applicants/NewApplicants';
+export { default as Payments } from './payments/Payments';
+export { default as Reissue } from './reissue/Reissue';
+export { default as Renewal } from './renewal/Renewal';
+export { default as Settings } from './settings/Settings';
+export { default as Login } from './login/Login';
+export { default as SignUp } from './signup/SignUp';

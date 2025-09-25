@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+* {
+  font-family: "Inter", sans-serif;
+}
+
+@property --num-verification {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-license {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-users {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes counter {
+  from {
+    --num-verification: 0;
+    --num-license: 0;
+    --num-users: 0;
+  }
+  to {
+    --num-verification: 700;
+    --num-license: 400;
+    --num-users: 800;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 10px;
+  margin: 30px;
+  padding: 5px;
+}
+*::-webkit-scrollbar-track {
+  background-color: white;
+}
+*::-webkit-scrollbar-thumb {
+  background: #22c55e80;
+  border-radius: 12px;
+}
+.mySwiper {
+  width: 100vw;
+  height: 700px;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* main {
+  min-height: 90vh;
+  max-width: 1280px;
+  margin: auto;
+  padding: 15px;
+} */
+
+/* Additional custom styles */
+
+@keyframes slidein {
+  0% {
+    translate: 18rem 0;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+.PhoneInputInput {
+  outline: none;
+  background: transparent;
+}
+
+.spinner {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><radialGradient id="a12" cx=".66" fx=".66" cy=".3125" fy=".3125" gradientTransform="scale(1.5)"><stop offset="0" stop-color="%2325E06B"></stop><stop offset=".3" stop-color="%2325E06B" stop-opacity=".9"></stop><stop offset=".6" stop-color="%2325E06B" stop-opacity=".6"></stop><stop offset=".8" stop-color="%2325E06B" stop-opacity=".3"></stop><stop offset="1" stop-color="%2325E06B" stop-opacity="0"></stop></radialGradient><circle transform-origin="center" fill="none" stroke="url(%23a12)" stroke-width="19" stroke-linecap="round" stroke-dasharray="200 1000" stroke-dashoffset="0" cx="100" cy="100" r="70"><animateTransform type="rotate" attributeName="transform" calcMode="spline" dur="1.2" values="360;0" keyTimes="0;1" keySplines="0 0 1 1" repeatCount="indefinite"></animateTransform></circle><circle transform-origin="center" fill="none" opacity=".2" stroke="%2325E06B" stroke-width="19" stroke-linecap="round" cx="100" cy="100" r="70"></circle></svg>');
+}
+
+/* Admin Table styles */
+.table-data {
+  @apply p-4 text-sm font-medium text-[#202224] whitespace-nowrap dark:text-white
+}
+
+.th {
+  @apply py-3 px-6 text-sm font-bold whitespace-nowrap tracking-wider text-left text-[#202224] font-nunito uppercase dark:text-gray-400
+}
+
+.status-pill {
+  @apply px-2 py-1 rounded text-xs w-24 text-center
+}
+
+/* End Admin Table styles */
